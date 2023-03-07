@@ -33,16 +33,16 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 
-mplementing on-premises Active Directory within Azure Virtual Machines involves the following steps:
+Implementing on-premises Active Directory within Azure Virtual Machines involves the following steps:
 
-Set up a Virtual Network: The first step is to create a virtual network in Azure. This network will provide connectivity between the on-premises Active Directory and Azure Virtual Machines. Ensure that the virtual network has a subnet that can be used to deploy virtual machines.
+1. Set up a Virtual Network: The first step is to create a virtual network in Azure. This network will provide connectivity between the on-premises Active Directory and Azure Virtual Machines. Ensure that the virtual network has a subnet that can be used to deploy virtual machines.
 
-Set up a Domain Controller: Next, deploy a virtual machine within the Azure Virtual Network and install the Active Directory Domain Services role. Configure the server as a domain controller for the on-premises Active Directory. Ensure that the server has a static IP address and is configured with DNS and DHCP services.
+2. Set up a Domain Controller: Next, deploy a virtual machine within the Azure Virtual Network and install the Active Directory Domain Services role. Configure the server as a domain controller for the on-premises Active Directory. Ensure that the server has a static IP address and is configured with DNS and DHCP services.
 
-Join Azure Virtual Machines to the Domain: Once the domain controller is set up, deploy additional virtual machines within the virtual network and join them to the on-premises Active Directory domain. Ensure that the virtual machines are configured with the correct DNS settings, and that they can communicate with the domain controller.
+3. Join Azure Virtual Machines to the Domain: Once the domain controller is set up, deploy additional virtual machines within the virtual network and join them to the on-premises Active Directory domain. Ensure that the virtual machines are configured with the correct DNS settings, and that they can communicate with the domain controller.
 
-Set up Site-to-Site VPN: To enable communication between the on-premises Active Directory and Azure Virtual Machines, set up a Site-to-Site VPN connection between the Azure Virtual Network and the on-premises network. This can be done using Azure VPN Gateway and a VPN device located in the on-premises network.
+4. Set up Site-to-Site VPN: To enable communication between the on-premises Active Directory and Azure Virtual Machines, set up a Site-to-Site VPN connection between the Azure Virtual Network and the on-premises network. This can be done using Azure VPN Gateway and a VPN device located in the on-premises network.
 
-Configure Active Directory Replication: To ensure that the on-premises Active Directory and the Azure Virtual Machines are in sync, configure Active Directory replication between the domain controller in Azure and the domain controllers in the on-premises network.
+5. Configure Active Directory Replication: To ensure that the on-premises Active Directory and the Azure Virtual Machines are in sync, configure Active Directory replication between the domain controller in Azure and the domain controllers in the on-premises network.
 
-Enable Azure Active Directory Domain Services: If you need to provide Azure Active Directory services to your Azure Virtual Machines, enable Azure Active Directory Domain Services within the Azure Virtual Network. This will allow you to join Azure Virtual Machines to an Azure-managed domain, and provide services such as LDAP, Kerberos, and NTLM authentication.
+6. Enable Azure Active Directory Domain Services: If you need to provide Azure Active Directory services to your Azure Virtual Machines, enable Azure Active Directory Domain Services within the Azure Virtual Network. This will allow you to join Azure Virtual Machines to an Azure-managed domain, and provide services such as LDAP, Kerberos, and NTLM authentication.
